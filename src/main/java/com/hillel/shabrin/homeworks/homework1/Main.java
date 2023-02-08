@@ -1,4 +1,4 @@
-package com.hillel.shabrin.homework.homework1;
+package com.hillel.shabrin.homeworks.homework1;
 
 public class Main {
     public static void main(String[] args) {
