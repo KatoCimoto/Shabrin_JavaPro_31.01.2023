@@ -2,7 +2,7 @@ package com.hillel.shabrin.homeworks.homework4.animal;
 
 public class Cat extends Animal{
 
-    public static int catCount;
+    private static int catCount;
 
     public Cat() {
         super();
@@ -14,6 +14,10 @@ public class Cat extends Animal{
         catCount++;
     }
 
+    public static int getCatCount() {
+        return catCount;
+    }
+
     @Override
     public void run(int howLong) {
         if (howLong <= 200) {
@@ -21,7 +25,9 @@ public class Cat extends Animal{
         } else
             System.out.println(name + " can't run so far");
     }
-    public void swim() {
+
+    @Override
+    public void swim(int howLong) {
         System.out.println(name + " can't swim");
     }
 }

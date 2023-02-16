@@ -1,6 +1,7 @@
 package com.hillel.shabrin.homeworks.homework4;
 
 
+import com.hillel.shabrin.homeworks.homework4.animal.Animal;
 import com.hillel.shabrin.homeworks.homework4.animal.Cat;
 import com.hillel.shabrin.homeworks.homework4.animal.Dog;
 
@@ -29,17 +30,18 @@ public class Main {
         System.out.println();
 
         cat1.run(199);
-        cat1.swim();
+        cat1.swim(4);
         System.out.println();
 
         cat2.run(400);
-        cat2.swim();
+        cat2.swim(2);
         System.out.println();
 
         cat3.run(15);
-        cat3.swim();
+        cat3.swim(8);
         System.out.println();
 
-        System.out.println("There were " + Dog.dogCount + " dogs and " + Cat.catCount + " cats in total.");
+         System.out.println("There were " + Dog.getDogCount() + " dogs and " + Cat.getCatCount() + " cats.");
+        System.out.println("The total number of animals: " + Animal.getAnCount());
     }
 }

@@ -2,7 +2,7 @@ package com.hillel.shabrin.homeworks.homework4.animal;
 
 public class Dog extends Animal{
 
-    public static int dogCount;
+    private static int dogCount;
 
     public Dog() {
         super();
@@ -12,6 +12,10 @@ public class Dog extends Animal{
     public Dog(String name) {
         this.name = name;
         dogCount++;
+    }
+
+    public static int getDogCount() {
+        return dogCount;
     }
 
     @Override
