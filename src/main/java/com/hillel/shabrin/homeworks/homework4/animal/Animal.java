@@ -1,10 +1,12 @@
 package com.hillel.shabrin.homeworks.homework4.animal;
 
-public abstract class Animal {
+public class Animal {
 
     String name;
     private static int anCount;
 
+
+    int distance;
     public Animal() {
         anCount++;
     }
@@ -18,11 +20,11 @@ public abstract class Animal {
         return anCount;
     }
 
-    public void run(int howLong){
-        System.out.println(name + " running " + howLong + 'm');
+    public void run(int distance){
+        System.out.println(this.name + " running " + distance + 'm');
     }
-    public void swim(int howLong){
-        System.out.println(name + " swimming " + howLong + 'm');
+    public void swim(int distance){
+    System.out.println(this.name + " swimming " + distance + 'm');
     }
 
 }

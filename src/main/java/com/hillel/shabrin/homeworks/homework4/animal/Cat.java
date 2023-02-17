@@ -3,6 +3,7 @@ package com.hillel.shabrin.homeworks.homework4.animal;
 public class Cat extends Animal{
 
     private static int catCount;
+    private int runDistance;
 
     public Cat() {
         super();
@@ -11,7 +12,13 @@ public class Cat extends Animal{
 
     public Cat(String name) {
         this.name = name;
+        runDistance = 200;
         catCount++;
+    }
+
+    public Cat(String name, int runDistance) {
+        this.name = name;
+        this.runDistance = runDistance;
     }
 
     public static int getCatCount() {
@@ -19,15 +26,15 @@ public class Cat extends Animal{
     }
 
     @Override
-    public void run(int howLong) {
-        if (howLong <= 200) {
-            super.run(howLong);
+    public void run(int distance) {
+        if (distance <= runDistance) {
+            super.run(distance);
         } else
-            System.out.println(name + " can't run so far");
+            System.out.println(this.name + " can't run so far");
     }
 
     @Override
-    public void swim(int howLong) {
-        System.out.println(name + " can't swim");
+    public void swim(int distance) {
+        System.out.println(this.name + " can't swim");
     }
 }

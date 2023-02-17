@@ -9,13 +9,13 @@ import com.hillel.shabrin.homeworks.homework4.animal.Dog;
 public class Main {
     public static void main(String[] args) {
 
-        Dog dog1 = new Dog("Bruce");
-        Dog dog2 = new Dog("Clark");
-        Dog dog3 = new Dog("Ben");
+        Dog dog1 = new Dog("Bruce",500,10);
+        Dog dog2 = new Dog("Clark",500,10);
+        Dog dog3 = new Dog("Ben",500,10);
 
-        Cat cat1 = new Cat("Tom");
-        Cat cat2 = new Cat("Ramsey");
-        Cat cat3 = new Cat("Soup");
+        Cat cat1 = new Cat("Tom",200);
+        Cat cat2 = new Cat("Ramsey",200);
+        Cat cat3 = new Cat("Soup",200);
 
         dog1.run(600);
         dog1.swim(7);
@@ -26,7 +26,7 @@ public class Main {
         System.out.println();
 
         dog3.run(900);
-        dog3.swim(11);
+        dog3.swim(10);
         System.out.println();
 
         cat1.run(199);
