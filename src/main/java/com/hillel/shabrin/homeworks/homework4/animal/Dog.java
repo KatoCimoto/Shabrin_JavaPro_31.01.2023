@@ -23,6 +23,7 @@ public class Dog extends Animal{
         this.name = name;
         this.runDistance = runDistance;
         this.swimDistance = swimDistance;
+        dogCount++;
     }
 
     public static int getDogCount() {
