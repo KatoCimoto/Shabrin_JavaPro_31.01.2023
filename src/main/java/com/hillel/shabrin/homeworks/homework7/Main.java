@@ -75,8 +75,8 @@ public class Main {
 
         int count = 0;
         char[] strArray = str.toCharArray();
-        for (int i = 0; i < strArray.length; i++) {
-            if(ch == strArray[i]){
+        for (char c : strArray) {
+            if (ch == c) {
                 count++;
             }
         }
