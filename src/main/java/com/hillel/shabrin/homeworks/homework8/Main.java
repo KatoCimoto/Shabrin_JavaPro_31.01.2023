@@ -14,9 +14,9 @@ public class Main {
         try {
             int result = doCalc(array);
             System.out.println(result);
-        } catch (ArraysValueCalculator.ArraySizeException e) {
+        } catch (ArraySizeException e) {
             System.err.println("Array size should be 4x4");
-        } catch (ArraysValueCalculator.ArrayDataException e) {
+        } catch (ArrayDataException e) {
             System.err.println(e.getMessage());
             System.err.println("Invalid data in array");
         }

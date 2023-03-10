@@ -20,20 +20,6 @@ public  class ArraysValueCalculator {
                 }
             }
         }
-
         return sum;
     }
-
-    public static class ArraySizeException extends Exception {
-        public ArraySizeException(String message) {
-            super(message);
-        }
-    }
-
-    public static class ArrayDataException extends Exception {
-        public ArrayDataException(String message, Throwable cause) {
-            super(message, cause);
-        }
-    }
 }
-
