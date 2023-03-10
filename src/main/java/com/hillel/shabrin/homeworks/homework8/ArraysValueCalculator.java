@@ -15,8 +15,8 @@ public  class ArraysValueCalculator {
                 try {
                     int num = Integer.parseInt(array[i][j]);
                     sum += num;
-                } catch (NumberFormatException ex) {
-                    throw new ArrayDataException("Invalid data in cell (" + i + "," + j + "): " + array[i][j], ex);
+                } catch (NumberFormatException e) {
+                    throw new ArrayDataException("Invalid data in cell (" + i + "," + j + "): " + array[i][j], e);
                 }
             }
         }

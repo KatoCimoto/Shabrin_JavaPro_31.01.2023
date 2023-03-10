@@ -14,10 +14,10 @@ public class Main {
         try {
             int result = doCalc(array);
             System.out.println(result);
-        } catch (ArraysValueCalculator.ArraySizeException ex) {
+        } catch (ArraysValueCalculator.ArraySizeException e) {
             System.err.println("Array size should be 4x4");
-        } catch (ArraysValueCalculator.ArrayDataException ex) {
-            System.err.println(ex.getMessage());
+        } catch (ArraysValueCalculator.ArrayDataException e) {
+            System.err.println(e.getMessage());
             System.err.println("Invalid data in array");
         }
     }
