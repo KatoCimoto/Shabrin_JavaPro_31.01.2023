@@ -1,5 +1,7 @@
 package com.hillel.shabrin.homeworks.homework8;
 
+import static com.hillel.shabrin.homeworks.homework8.ArraysValueCalculator.doCalc;
+
 public class Main {
     public static void main(String[] args) {
         String[][] array = {
@@ -9,14 +11,14 @@ public class Main {
                 {"13", "14", "15", "16"}
         };
 
-        ArraysValueCalculator arraysValueCalculator = new ArraysValueCalculator();
         try {
-            int result = arraysValueCalculator.doCalc(array);
-            System.out.println("Result: " + result);
-        } catch (ArraySizeException ex) {
-            System.out.println("Array size is not valid: " + ex.getMessage());
-        } catch (ArrayDataException ex) {
-            System.out.println("Array data is not valid: " + ex.getMessage());
+            int result = doCalc(array);
+            System.out.println(result);
+        } catch (ArraysValueCalculator.ArraySizeException ex) {
+            System.err.println("Array size should be 4x4");
+        } catch (ArraysValueCalculator.ArrayDataException ex) {
+            System.err.println(ex.getMessage());
+            System.err.println("Invalid data in array");
         }
     }
 }

@@ -1,5 +1,4 @@
 package com.hillel.shabrin.homeworks.homework8;
-import java.util.Arrays;
 public  class ArraysValueCalculator {
 
     public static int doCalc(String[][] array) throws ArraySizeException, ArrayDataException {
@@ -16,13 +15,25 @@ public  class ArraysValueCalculator {
                 try {
                     int num = Integer.parseInt(array[i][j]);
                     sum += num;
-                } catch (NumberFormatException e) {
-                    throw new ArrayDataException("Invalid data in cell (" + i + "," + j + "): " + array[i][j], e);
+                } catch (NumberFormatException ex) {
+                    throw new ArrayDataException("Invalid data in cell (" + i + "," + j + "): " + array[i][j], ex);
                 }
             }
         }
 
         return sum;
+    }
+
+    public static class ArraySizeException extends Exception {
+        public ArraySizeException(String message) {
+            super(message);
+        }
+    }
+
+    public static class ArrayDataException extends Exception {
+        public ArrayDataException(String message, Throwable cause) {
+            super(message, cause);
+        }
     }
 }
 
